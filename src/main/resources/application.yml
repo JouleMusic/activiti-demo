@@ -1,0 +1,15 @@
+#配置spring的数据源
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://activitidb?characterEncoding=utf-8&serverTimeZone=UTC
+    name: activiti
+    password: Mysql@123
+
+#activiti配置
+  activiti:
+    database-schema-update: true # 对所有表进行更新操作，若不存在则自动创建
+    db-history-used: true # 检测历史表是否存在。启动数据库历史记录
+    history-level: full # 保存历史数据的最高级别
+    check-process-definitions: false # 校验流程文件，默认校验resource下的process文件夹里的流程文件
+
